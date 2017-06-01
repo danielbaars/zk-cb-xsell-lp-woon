@@ -1,0 +1,409 @@
+.container {
+	@media #{$tablet} {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	@media #{$desktop-wide} {
+		width: 992px;
+	}
+}
+.outer-hero {
+	background-image: url(../img/construction_hero.jpg);
+	background-position: center bottom;
+	height: 466px;	
+	padding-top: 16px;
+	border: none;
+	.container {
+		padding: 0 30px;
+	}
+	.hero-title-2 {
+		font-size: 22px;
+		@media #{$phablet} {
+			font-size: 26px;
+		}
+		@media #{$tablet-small} {
+			margin-bottom: 20px;
+			font-size: 28px;
+		}
+		@media #{$tablet} {
+			font-size: 36px;
+			margin-bottom: 30px;
+		}
+		@media #{$desktop} {
+			font-size: 38px;
+			margin-top: 6px;
+			margin-bottom: 24px;
+		}
+		br {
+			@media (min-width: 337px) {
+				display: none;
+			}
+			@media (min-width: 436px) {
+				display: block;
+			}
+			@media #{$desktop} {
+				display: none;
+			}
+		}
+	}
+	.left-container,
+	.small-container {
+		float: none;
+	}
+	.pblock__discount {
+		@media #{$desktop} {
+			display: none;
+		}
+	}
+}
+
+.hero-list {
+	margin-top: 0;
+	max-width: 448px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 16px;
+	margin-bottom: -6px;
+	@media #{$tablet-small} {
+		margin-top: 0;
+		margin-bottom: 42px;
+	}
+	@media #{$tablet} {
+		max-width: 360px;
+		max-width: none;
+		font-size: 18px;
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: 12px;
+		padding-right: 45px;
+	}
+	@media #{$desktop} {
+		font-size: 24px;
+		padding-right: 0;
+		margin-left: 22px;
+		margin-top: 48px;
+		margin-bottom: 0;
+	}
+	li p {
+		@media #{$desktop} {
+			padding-left: 35px;
+		}	
+		&:before {
+			@media #{$desktop} {
+				font-size: 26px;
+				margin-right: 15px;
+			}
+		}
+	}
+}
+
+.mobile-hero-widgets {
+	padding: 0;
+
+	.hero-list {
+		font-size: 16px;
+		@media #{$tablet-small} {
+			display: none;
+		}
+		li p {
+			padding-left: 26px;
+			margin-bottom: 7px;
+			&:before {
+				top: 3px;
+			}
+		}
+	}
+
+	.small-container {
+		height: auto;
+	}
+
+	.check-widget {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		.form-group {
+			width: 30%;
+			&.addition {
+				margin-right: 0;
+			}
+		}
+	}
+
+}
+
+$mainWidgetDesktopWidth: 283px;
+$kortingBadgeDesktopWidth: 120px;
+
+.main-widget-container {
+	min-height: 0;
+}
+
+.main-widget {
+	max-width: 400px;
+	height: auto;
+	@media #{$desktop} {
+		padding-bottom: 70px;
+	}
+	h2 {
+		font-size: 19px;
+		font-weight: 600;
+		@media #{$desktop} {
+
+		}
+	}
+}
+
+.korting-badge {
+	display: none;
+	@media #{$desktop} {
+		display: block;
+		width: 120px;
+		position: absolute;
+		left: ($mainWidgetDesktopWidth - $kortingBadgeDesktopWidth)/2;
+		bottom: -80px;		
+	}
+}
+
+.spw__form {
+	margin-bottom: 0;
+}
+
+.input-fields-container {
+	text-align: center;
+	.form-group {
+		margin-bottom: 10px;
+	}
+}
+
+.information-block {
+	padding-top: 18px;
+	.information-title {
+		font-size: 23px;
+		margin-bottom: 8px;
+		@media #{$tablet} {
+			font-size: 32px;
+			text-align: center;
+		}
+		@media #{$desktop} {
+			font-size: 36px;
+			text-align: left;
+		}		
+	}
+	.information-title-2 {
+		line-height: 1.4;
+		margin-bottom: 13px;
+		@media #{$tablet} {
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		@media #{$desktop} {
+			text-align: left;
+		}		
+		br {
+			display: none;
+			@media #{$tablet} {
+				display: block;
+			}
+			@media #{$desktop} {
+				display: none;
+			}
+		}
+	}
+	.pblock__name {
+		font-size: 20px;
+		margin-bottom: 5px;
+	}
+
+}
+
+.dekking {
+	margin-left: 0;
+	margin-right: 0;
+	position: relative;
+}
+
+.dekking--inboedel,
+.dekking--opstal {
+	@media #{$tablet} {
+		height: 208px;
+		margin-bottom: 20px;
+	}
+	@media #{$desktop} {
+		height: 232px;
+	}
+}
+
+.dekking--kostbaarheden,
+.dekking--pechhulp {
+	@media #{$tablet} {
+		height: 230px;
+		margin-bottom: 20px;
+	}
+	@media #{$desktop} {
+		height: 254px;
+	}
+}
+
+.dekkingen-button-container {
+	max-width: 540px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	@media #{$desktop} {
+		max-width: none;
+	}
+	.input-button-container {
+		margin-top: 0;
+	}
+}
+
+.pblock__discount {
+	float: none;
+	position: absolute;
+}
+
+.pblock__info {
+	padding-right: 18px;
+}
+
+.break320 {
+	display: none;
+}
+
+.contact-container {
+	//margin: 0 !important;
+	//width: 100% !important;
+	.contact-block {
+		width: 100%;
+		max-width: 360px;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		.xsell-button {
+		//max-width: 100% !important;
+		}
+	}
+	.widget-button-note {
+		float: left;
+		margin-right: 10px;
+
+	  .xsell-button.first {
+		  margin-top: -13px !important;
+	  }
+
+	  & ~ .xsell-button {
+		width: 293px;
+		position: absolute;
+		left: 253px;
+	  }
+
+	}
+}
+
+.contact-block {
+  @include row-padding;
+}
+
+
+.contact-block {
+  position: relative;
+  @include panel-padding--small;
+  border-radius: 6px;
+  background-color: $cb-groen;
+  &, a {
+    color: white;
+  }
+  ul {
+    padding: 0;
+    margin-bottom: 0;
+  }
+  li {
+    font-size: 15px;
+    margin-bottom: 9px;
+    list-style-type: none;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @media #{$desktop-wide} {
+      font-size: 17px;
+      margin-bottom: 13px;
+    }
+  }
+  .xsell-button {
+    width: 100%;
+    max-width: 260px;
+    margin-top: 9px;
+  }
+}
+
+.contact__header {
+	font-size: 23px;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 6px;
+    @media #{$tablet} {
+      font-size: 22px;
+    }
+    @media #{$desktop} {
+      font-size: 24px;
+    }	
+}
+
+.contact__intro {
+	p {
+		font-size: 16px;
+		text-align: center;
+		margin-bottom: 6px;
+		@media #{$desktop} {
+			font-size: 18px;
+		}
+	}
+}
+
+.cb-phone--large {
+	text-align: center;
+	display: block;
+	margin-bottom: 8px;
+    @media #{$desktop} {
+      font-size: 34px;
+    }	
+	.phone-info-icon {
+		display: none;
+	}
+}
+
+.contact__button-note {
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: 0;
+    @media #{$desktop} {
+      font-size: 18px;
+    }	
+	&--email {
+		margin-top: 10px;
+	}
+}
+
+.links-section {
+	a {
+		display: block;
+		font-size: 14px;
+		@media #{$phablet} {
+			display: inline-block;
+		}
+		@media #{$tablet-small} {
+			font-size: 16px;
+		}
+		&:first-child {
+			margin-bottom: 4px;
+		}
+	}
+}
+
+footer {
+	.row {
+		//padding-left: 15px;
+		//padding-right: 15px;
+	}
+}

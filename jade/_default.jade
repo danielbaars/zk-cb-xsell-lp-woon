@@ -1,0 +1,38 @@
+include _variables
+doctype html
+html(lang="en")
+	block header
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(name="description" content="")
+		meta(name="robots" content="noindex, nofollow")
+		//-meta(name="author" content="")
+		link(rel="shortcut icon" href="img/favicon.ico")
+		title #{pageTitle}
+		//-link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet")
+		link(rel="stylesheet" href="css/app.css")
+		link(href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Titillium+Web:400,600,700' rel='stylesheet' type='text/css')
+		script(type="text/javascript" src="js/preset.js")
+		<!--[if lt IE 9]>
+		script(src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js")
+		script(src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js")
+		//-link(rel="stylesheet" href="css/ie8.css")
+		<![endif]-->    
+	if formType == "auto-woon"
+		body(class='#{bodyClass}' onload="populate('autoFormulier'); populate('woonFormulier');")
+			block content
+			include _scripts
+	else if formType == "auto"
+		body(class='#{bodyClass}' onload="populate('autoFormulier');")
+			block content
+			include _scripts
+	else if formType == "woon"
+		body(class='#{bodyClass}' onload="populate('woonFormulier');")
+			block content
+			include _scripts
+	else
+		body(class='#{bodyClass}')
+			block content       
+			include _scripts
